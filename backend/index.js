@@ -10,4 +10,22 @@ const cors = require("cors");
 app.use(express.json()); 
 app.use(cors());
 
-test; 
+//DB Connection with MongoDB 
+mongoose.connect("mongodb+srv://omerta1:create.envfile@cluster0.7eduzss.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+
+
+//API 
+
+app.get( '/', (req,res) => {
+    res.send('App is Running')
+})
+
+app.listen(port, (error) => {
+    if (!error) {
+        console.log("Server running on Port "+port);
+    }
+    else 
+    {
+        console.log("Error :"+error);
+    }
+})
