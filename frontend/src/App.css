@@ -1,0 +1,153 @@
+/* Amazon Shop */
+.amazonShop {
+  margin-top: 20px;
+  padding: 10px;
+  position: relative;
+  width: 100vw;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  overflow: hidden;
+  background-color: whitesmoke;
+  text-align: center;
+  border:1px solid lightgray;
+}
+
+.amazonShop h3 {
+  width: 100%;
+  height: auto;
+}
+
+
+/* TopShop banner */
+.top {
+  margin: 10px;
+  color: black;
+  padding: none;
+  text-align: center;
+
+}
+
+.btns-container {
+  margin-top: -2%;
+  justify-content: center;
+  gap: 10px;
+}
+
+.top-btns {
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 7px 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: 600;
+  margin-right: 15px;
+}
+
+.top-btns:hover {
+  background-color: #494949;
+}
+
+.hook {
+  font-family: 'poppins';
+  font-size: 5vw;
+  font-weight: bolder;
+}
+
+.vid-container {
+  position: relative;
+  width: 100vw;
+  height: 50vh;
+  overflow: hidden;
+  left: 50%;
+  right: 50%;
+  margin-top: 2%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+.bg-vid {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/**** LoginSignUp ****/
+.loginsignup {
+  padding: 30% ;
+  width: auto;
+  background: #e4e2e2;
+  padding-top: 100px;
+}
+
+.loginsignup-container {
+  box-shadow: 10px 10px 24px black;
+  width: fit-content;
+  background: transparent;
+  background-color: #d7d7d7;
+  padding: 40px 60px;
+  opacity: 90%;
+}
+
+.loginsignup-container h1 {
+  margin: 20px 0px;
+}
+
+.loginsignup-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 29px;
+  margin-top: 30px;
+}
+
+.loginsignup-fields input {
+  height: 30px;
+  width: 75%;
+  padding-left: 20px;
+  border: 1px solid #c9c9c9;
+  border-radius: 15px;
+  outline: none;
+  color: #5c5c5c;
+  font-size: 15px;
+}
+
+.loginsignup-container span {
+  color: #5a4444;
+  cursor: pointer;
+}
+
+.loginsignup-container span:hover {
+  font-size: 17px;
+  transition: 0.3s;
+  color: #5775c2;
+}
+
+.loginsignup-container button {
+  width: 30%;
+  height: 25px;
+  border: none;
+  border-radius: 15px;
+  color: #878787;
+  font-size: 15px;
+  background:#e4e2e2;
+  cursor: pointer;
+}
+
+.loginsignup-container button:hover{
+  background: #494949;
+}
+
+.loginsignup-login {
+  margin-top: 20px;
+  font-weight: 500;
+}
+
+.loginsignup-agree {
+  display: flex;
+  align-items: center;
+  margin-top: 25px;
+  gap: 20px;
+  font-weight: 500;
+}

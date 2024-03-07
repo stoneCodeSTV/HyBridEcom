@@ -1,0 +1,30 @@
+.item {
+    width: 350px;
+}
+
+.item p {
+    margin: 6px 0px;
+}
+
+.item:hover {
+    transform: scale(1.10);
+    transition: 0.5s;
+}
+
+.item-prices {
+    display: flex;
+    gap: 20px;
+}
+
+.item-regPrice {
+    color: red; 
+    font-size: 15px;
+    font-weight: 300;
+    text-decoration: line-through;
+}
+
+.item-salePrice {
+    color: green;
+    font-size: 15px;
+    font-weight: 500;
+}
