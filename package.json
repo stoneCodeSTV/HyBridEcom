@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "realm-web": "^2.0.0",
+    "with-tailwindcss": "^1.0.0"
+  }
+}
