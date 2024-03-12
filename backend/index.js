@@ -66,7 +66,7 @@ const Product = mongoose.model('Product', {
         type:Date,
         default:Date.now
     },
-    availabe: {
+    available: {
         type: Boolean,
         default: true
     }

@@ -5,7 +5,7 @@ import './Deals.css'
 const Deals = () => {
   return (
     <div className='deals'>
-
+Deals
     </div>
   )
 }
