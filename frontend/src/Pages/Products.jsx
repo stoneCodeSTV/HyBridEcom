@@ -27,7 +27,8 @@ const Products = () => {
 
   return (
 <div className="product">
-      <h3>Unique & Innovative </h3>
+  <h3>Unique & Innovative </h3>
+    <hr />
       {products.length > 0 ? (
         products.map(product => (
           <div key={product._id} className="product-item">
