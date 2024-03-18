@@ -1,14 +1,16 @@
 import React from 'react'
 import TopShop from '../Components/TopShop/TopShop'
 import Deals from '../Components/Deals/Deals'
-import Products from '../Pages/Products'
+import Popular from '../Components/Popular/Popular'
+import Newsletter from '../Components/Newsletter/Newsletter'
 
 const Shop = () => {
   return (
-    <div className='shop'>
+    <div>
     <TopShop />
-    {/*<Deals />*/}
-    <Products />
+    <Popular />
+    <Deals />
+    <Newsletter />
     </div>
   )
 }

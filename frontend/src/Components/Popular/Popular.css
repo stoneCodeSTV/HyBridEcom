@@ -1,27 +1,25 @@
-.new-deals {
+.popular {
     display: flex; 
     flex-direction: column;
     align-items: center;
-    gap: 20px;
-    margin-bottom: 100px;
+    gap: 10px;
+    height: 90vh;
 }
 
-.new-deals h3 {
+.popular h3 {
     font-size: 30px;
     font-weight: 600;
 }
 
-.new-deals hr {
-    width: 60px;
+.popular hr {
+    width: 200px;
     height: 6px;
     border-radius: 10px;
     background: #252525;
 }
 
-.deals {
+.popular-item {
     margin-top: 50px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
     gap: 30px;
-
 }

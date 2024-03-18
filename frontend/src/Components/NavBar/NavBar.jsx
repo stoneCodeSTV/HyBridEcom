@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import './NavBar.css'
 import { BiSolidShoppingBags } from "react-icons/bi";
 import { Link } from 'react-router-dom';
+import logo from '../Assets/logo.png'
 
 const NavBar = () => {
 
@@ -15,11 +16,13 @@ const NavBar = () => {
       );
 
     const [menu, setMenu] = useState('shop')
+    const [activeNav, setActiveNav] = useState('#')
+
   return (
     <div className='navbar'>
 
         <div className='nav-logo'>
-            <img src='' alt='logo'/>
+            <img src={logo} alt='logo'/>
             <Link to='/'><p onClick={() => {setMenu('shop')}}>Hybrid E-Com</p></Link>
         </div>
 

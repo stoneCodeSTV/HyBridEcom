@@ -2,7 +2,7 @@ import React from 'react'
 import { useEffect, useState } from 'react' 
 import * as Realm from 'realm-web'
 
-const Products = () => {
+const Product = () => {
 
   const [products, setProducts]= useState([]);
 
@@ -48,4 +48,4 @@ const Products = () => {
   );
 };
 
-export default Products;
+export default Product;
