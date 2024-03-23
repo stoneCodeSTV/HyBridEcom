@@ -10,7 +10,7 @@ const Deals = () => {
     <div className='new-deals'>
       <h3>Deals</h3>
       <hr />
-        <div class="deals">
+        <div className="deals">
         {deals.map((item,i) => {
         return <Item key={i} 
                 id={item.id} 

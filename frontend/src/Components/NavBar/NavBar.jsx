@@ -16,7 +16,6 @@ const NavBar = () => {
       );
 
     const [menu, setMenu] = useState('shop')
-    const [activeNav, setActiveNav] = useState('#')
 
   return (
     <div className='navbar'>
@@ -34,7 +33,7 @@ const NavBar = () => {
         </ul>
 
         <div className='nav-login-cart'>
-            <SearchBar searchQuery='' onChange='' />
+            <SearchBar searchQuery='' onChange='' onClick/>
             <Link to='/login'><button>Login</button></Link>
             <Link to='/cart'><BiSolidShoppingBags className='cart' /></Link>
             <div className='cart-count'>0</div>

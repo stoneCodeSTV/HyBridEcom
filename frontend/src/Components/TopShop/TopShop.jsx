@@ -18,7 +18,7 @@ const TopShop = () => {
                 <a href='#deals'><button className="top-btns">Deals</button></a>
             </div>
             <div className="vid-container">
-                <video ref={vidRef} autoPlay loop muted playsinline className="bg-vid">
+                <video ref={vidRef} autoPlay loop muted playsInline className="bg-vid">
                     <source src="./vid/vidmtl720p.mp4" type="video/mp4"/>
                 </video>
             </div>

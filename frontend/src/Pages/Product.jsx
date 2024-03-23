@@ -1,51 +1,22 @@
-import React from 'react'
-import { useEffect, useState } from 'react' 
-import * as Realm from 'realm-web'
+import React, {useContext} from 'react'
+import {ShopContext } from '../Context/ShopContext' 
+import {useParams} from 'react-router-dom'
+import Breadcrum from '../Components/Breadcrums/Breadcrum';
+import ProductDisplay from '../Components/ProductDisplay/ProductDisplay';
 
 const Product = () => {
 
-  const [products, setProducts]= useState([]);
-
-  useEffect(() => {
-    const fetchProducts = async () => {
-      const REALM_APP_ID = 'products-bkgdc';
-      const app = new Realm.App({ id: REALM_APP_ID });
-      const credentials = Realm.Credentials.anonymous();
-
-      try {
-        const user = await app.logIn(credentials);
-        const allProducts = await user.functions.getAllProducts();
-        console.log('All Products:', allProducts);
-        setProducts(allProducts);
-      } catch (error) {
-        console.log('An error occurred:', error);
-      }
-    };
-
-    fetchProducts();
-  }, []);
-
-  return (
-<div className="product">
-  <h3>Unique & Innovative </h3>
-    <hr />
-      {products.length > 0 ? (
-        products.map(product => (
-          <div key={product._id} className="product-item">
-            <img src={product.image} alt={product.name} />
-            <div className="product-details">
-              <h4>{product.name}</h4>
-              <p>Category: {product.category}</p>
-              <p>Price: ${product.price}</p>
-              <p>Availability: {product.available ? 'Available' : 'Out of stock'}</p>
-            </div>
-          </div>
-        ))
-      ) : (
-        <p>No products available</p>
-      )}
+  const {all_products}= useContext(ShopContext);
+  const {productId}= useParams();
+  const product = all_products.find((e) => e.id === Number(productId));
+  
+return (
+    <div>
+      <Breadcrum product={product} />
+      <ProductDisplay product={product} />
     </div>
-  );
-};
+  )
+
+}
 
 export default Product;
