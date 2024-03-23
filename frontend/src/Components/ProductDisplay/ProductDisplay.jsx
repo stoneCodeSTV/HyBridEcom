@@ -27,10 +27,27 @@ const ProductDisplay = (props) => {
                     <img src= {star_icon} alt='' />
                     <img src= {star_dull_icon} alt='' />
                     <p>(425)</p>
-                </div> 
-        
+                </div>
+                <div className="productDisplay-right-prices">
+                    <div className="productDisplay-right-prices-reg">{product.regPrice}$</div>
+                    <div className="productDisplay-right-prices-sale">{product.salePrice}$</div>
+                </div>
+                <div className="productDisplay-right-description">
+                    A comfy stay at home or go out on the night oufit
+                </div>
+                <div className="productDisplay-right-size">
+                    <h3>Select Size</h3>
+                        <div className="productDisplay-right-size-options">
+                            <div>S</div>
+                            <div>M</div>
+                            <div>L</div>
+                            <div>XL</div>
+                            <div>XXL</div>
+                        </div>
+                </div>
+                <button>ADD TO CART</button>
         </div>
     </div>
-  )
+    )
 }
 export default ProductDisplay

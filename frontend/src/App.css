@@ -182,14 +182,16 @@
 }
 
 .category-sort {
+  display: flex;
   padding: 2px 20px;
   border-radius: 30px;
   border: 1px solid #878787; 
+  justify-content: center;
 }
+
 
 .category-sort span p {
   font-weight: 500;
-  
 }
 
 
