@@ -33,7 +33,7 @@ const ProductDisplay = (props) => {
                     <div className="productDisplay-right-prices-sale">{product.salePrice}$</div>
                 </div>
                 <div className="productDisplay-right-description">
-                    A comfy stay at home or go out on the night oufit
+                    A comfy stay at home or go out on the night outfit
                 </div>
                 <div className="productDisplay-right-size">
                     <h3>Select Size</h3>
