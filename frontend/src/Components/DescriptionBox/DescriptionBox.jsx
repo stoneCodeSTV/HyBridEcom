@@ -4,7 +4,7 @@ import './DescriptionBox.css';
 const DescriptionBox = () => {
   return (
     <div className='descriptionBox'>
-        <div class="descriptionBox-nav">
+        <div className="descriptionBox-nav">
             <div className="descriptionBox-nav-box">Description</div>
             <div className="descriptionBox-nav-box fade">Reviews(425)</div>
         </div>

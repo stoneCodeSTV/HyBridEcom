@@ -5,7 +5,7 @@ import { BsBagXFill } from "react-icons/bs";
 
 const CartItems = () => {
 
-    const {all_products, cartItems, removeFromCart } = useContext(ShopContext);
+    const {all_products, cartItems, removeFromCart, getTotalCartAmount} = useContext(ShopContext);
 
   return (
     <div className='cartitems'>
@@ -41,7 +41,7 @@ const CartItems = () => {
               <div>
                 <div className="cartitems-total-items">
                   <p>Subtotal</p>
-                  <p>{0}$</p>
+                  <p>{getTotalCartAmount()}$</p>
                 </div>
                 <hr />
                 <div className="cartitems-total-items">
@@ -50,14 +50,14 @@ const CartItems = () => {
                 </div>
                 <hr />
                 <div className="cartitems-total-items">
-                  <h5>Total</h5>
-                  <h5>{0}$</h5>
+                  <h3>Total</h3>
+                  <h5>{getTotalCartAmount()}$</h5>
                 </div>
               </div>
               <button>PROCEED TO CHECKOUT</button>
           </div>
           <div className="cartitems-promo">
-            <p>If you have a promo code, Enter it here</p>
+            <p>If you have a promo code, Enter it below.</p>
             <div className="cartitems-promobox">
               <input type="text" placeholder="Enter Promo Code" />
               <button>Submit</button>
