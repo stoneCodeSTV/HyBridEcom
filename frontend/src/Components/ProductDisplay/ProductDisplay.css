@@ -19,7 +19,7 @@
 }
 
 .productDisplay-img-list img {
-height: 160px;
+height: 150px;
 }
 
 .productDisplay-main-img {
@@ -103,4 +103,72 @@ button {
 button:hover {
     color: white;
     background-color: darkgray;
+}
+
+@media (max-width: 1280px) {
+    .productDisplay {
+        margin: 0px 50px;
+    }
+
+    .productDisplay-left {
+        gap: 10px;
+    }
+
+    .productDisplay-img-list {
+        gap: 5px;
+    }
+
+    .productDisplay-img-list img {
+        height: 110px;
+    }
+
+    .productDisplay-main-img {
+    height: 510px;
+    width: auto;
+    }
+
+    .productDisplay-right {
+        margin: 0px 20px;
+    }
+
+    .productDisplay-right h1 {
+        font-size: 23px;
+    }
+
+    .productDisplay-right-rating {
+        gap: 3px;
+        font-size: 13px;
+    }
+
+    .productDisplay-right-prices {
+        margin: 10px 0px;
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 1024px) {
+    /* CSS code for 1024px and below */
+    .productDisplay {
+        /* Update styles for 1024px and below */
+    }
+
+    /* Add more CSS code for 1024px and below if needed */
+}
+
+@media (max-width: 800px) {
+    /* CSS code for 800px and below */
+    .productDisplay {
+        /* Update styles for 800px and below */
+    }
+
+    /* Add more CSS code for 800px and below if needed */
+}
+
+@media (max-width: 500px) {
+    /* CSS code for 500px and below */
+    .productDisplay {
+        /* Update styles for 500px and below */
+    }
+
+    /* Add more CSS code for 500px and below if needed */
 }

@@ -202,3 +202,55 @@
   row-gap: 80px;
   gap: 30px;
 }
+
+@media(max-width: 768px) {
+  .amazonShop {
+    margin-top: 10px;
+    padding: 5px;
+  }
+
+  .top {
+    margin: 5px;
+  }
+
+  .hook {
+    font-size: 3vw;
+  }
+
+  .vid-container {
+    height: 30vh;
+    margin-top: 1%;
+  }
+
+  .loginsignup {
+    padding: 10%;
+    padding-top: 50px;
+  }
+
+  .loginsignup-container {
+    padding: 20px 30px;
+  }
+
+  .loginsignup-fields input {
+    width: 100%;
+  }
+
+  .loginsignup-container button {
+    width: 50%;
+  }
+
+  .product-item {
+    margin-top: 30px;
+    flex-direction: column;
+  }
+
+  .category-indexSort {
+    margin: 0px 50px;
+  }
+
+  .category-products {
+    margin: 10px 50px;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 40px;
+  }
+}
