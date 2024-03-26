@@ -10,7 +10,7 @@ const cors = require("cors");
 app.use(express.json()); 
 app.use(cors());
 
-//DB Connection with MongoDB 
+// MongoDB Connection
 mongoose.connect("mongodb+srv://omerta1:4MomYS9KXDCsMThe@cluster0.7eduzss.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 
 
@@ -58,7 +58,11 @@ const Product = mongoose.model('Product', {
         type:String,
         required:true
     }, 
-    price: {
+    salePrice: {
+        type:Number,
+        required:true
+    },
+    regPrice: {
         type:Number,
         required:true
     },
@@ -92,7 +96,8 @@ app.post('/addproduct', async(req,res) =>{
             name:req.body.name,
             image:req.body.image, 
             category:req.body.category,
-            price:req.body.price,
+            salePrice:req.body.salePrice,
+            regPrice:req.body.regPrice,
         });
         console.log(product);
         await product.save();
