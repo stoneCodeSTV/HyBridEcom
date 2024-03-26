@@ -49,3 +49,24 @@
     font-size: 14px;
     color: #888;
 }
+
+
+@media(max-width: 768px) {
+    .relatedProducts {
+        height: 100%;
+    }
+
+    .relatedProducts  {
+        font-size: 20px;
+    }
+
+    .relatedProducts hr {
+        width: 150px;
+        height: 4px;
+    }
+
+    .relatedProducts-item {
+        flex-direction: column;
+        gap: 20px;
+    }
+}

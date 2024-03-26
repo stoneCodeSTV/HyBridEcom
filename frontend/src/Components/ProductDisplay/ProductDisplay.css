@@ -144,31 +144,207 @@ button:hover {
         margin: 10px 0px;
         font-size: 17px;
     }
+
+    .productDisplay-right-description {
+        font-size: 16px;
+        margin-top: 20px;
+    }
+
+    .productDisplay-right-size h1 {
+        font-size: 14px;
+    }
+
+    .productDisplay-right-size div {
+        padding: 15px 20px;
+    }
+
+    .productDisplay-right button {
+        padding: 15px 0px;
+        height: 45px;
+        width: 120px;
+        margin-bottom: 10px;
+        font-size: 15px;
+        
+    }
 }
 
 @media (max-width: 1024px) {
-    /* CSS code for 1024px and below */
     .productDisplay {
-        /* Update styles for 1024px and below */
+        margin: 0px 30px;
     }
 
-    /* Add more CSS code for 1024px and below if needed */
+    .productDisplay-left {
+        gap: 5px;
+    }
+
+    .productDisplay-img-list {
+        gap: 10px;
+    }
+
+    .productDisplay-img-list img {
+        height: 100px;
+    }
+
+    .productDisplay-main-img {
+    height: 490px;
+    width: auto;
+    }
+
+    .productDisplay-right {
+        margin: 0px 10px;
+    }
+
+    .productDisplay-right h1 {
+        font-size: 18px;
+    }
+
+    .productDisplay-right-rating {
+        gap: 2px;
+        font-size: 12px;
+    }
+
+    .productDisplay-right-description {
+        font-size: 14px;
+        margin-top: 10px;
+    }
+
+    .productDisplay-right-sizes {
+        margin: 10px 0px;
+    }
+
+    .productDisplay-right-size div {
+        padding: 10px 13px;
+        font-size: 12px;
+    }
+
+    .productDisplay-right button {
+        padding: 10px 0px;
+        height: 35px;
+        width: 100px;
+        margin-bottom: 5px;
+        font-size: 12px;
+        
+    }
 }
 
 @media (max-width: 800px) {
-    /* CSS code for 800px and below */
     .productDisplay {
-        /* Update styles for 800px and below */
+        margin: 0px 10px;
     }
 
-    /* Add more CSS code for 800px and below if needed */
+    .productDisplay-left {
+        gap: 0px;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .productDisplay-img-list {
+        gap: 8px;
+        flex-direction: row;
+    }
+
+    .productDisplay-img-list img {
+        height: 80px;
+    }
+
+    .productDisplay-main-img {
+    height: 400px;
+    width: auto;
+    }
+
+    .productDisplay-right {
+        margin: 0px 10px;
+    }
+
+    .productDisplay-right h1 {
+        font-size: 16px;
+    }
+
+    .productDisplay-right-rating {
+        gap: 2px;
+        font-size: 10px;
+    }
+
+    .productDisplay-right-description {
+        font-size: 12px;
+        margin-top: 10px;
+    }
+
+    .productDisplay-right-sizes {
+        margin: 10px 0px;
+    }
+
+    .productDisplay-right-size div {
+        padding: 8px 10px;
+        font-size: 10px;
+    }
+
+    .productDisplay-right button {
+        padding: 8px 0px;
+        height: 30px;
+        width: 80px;
+        margin-bottom: 5px;
+        font-size: 10px;
+        
+    }
 }
 
 @media (max-width: 500px) {
-    /* CSS code for 500px and below */
     .productDisplay {
-        /* Update styles for 500px and below */
+        margin: 0px 10px;
     }
 
-    /* Add more CSS code for 500px and below if needed */
+    .productDisplay-left {
+        gap: 5px;
+    }
+
+    .productDisplay-img-list {
+        gap: 5px;
+    }
+
+    .productDisplay-img-list img {
+        height: 60px;
+    }
+
+    .productDisplay-main-img {
+    height: 370px;
+    width: auto;
+    }
+
+    .productDisplay-right {
+        margin: 0px 10px;
+    }
+
+    .productDisplay-right h1 {
+        font-size: 14px;
+    }
+
+    .productDisplay-right-rating {
+        gap: 2px;
+        font-size: 8px;
+    }
+
+    .productDisplay-right-description {
+        font-size: 10px;
+        margin-top: 10px;
+    }
+
+    .productDisplay-right-sizes {
+        margin: 10px 0px;
+    }
+
+    .productDisplay-right-size div {
+        padding: 6px 8px;
+        font-size: 8px;
+    }
+
+    .productDisplay-right button {
+        padding: 6px 0px;
+        height: 25px;
+        width: 70px;
+        margin-bottom: 5px;
+        font-size: 8px;
+        
+    }
+
 }
