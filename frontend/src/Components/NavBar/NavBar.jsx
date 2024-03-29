@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import logo from '../Assets/logo.png'
 import { ShopContext } from '../../Context/ShopContext';
 import { RxHamburgerMenu } from "react-icons/rx";
+import { IoSearch } from "react-icons/io5";
 
 const NavBar = () => {
 
@@ -43,8 +44,10 @@ const NavBar = () => {
         </ul>
 
         <div className='nav-login-cart'>
-            <SearchBar searchQuery='' onChange='' onClick/>
-            <Link to='/login'><button>Login</button></Link>
+        <IoSearch /><SearchBar searchQuery='' onChange='' onClick />
+            {localStorage.getItem('authToken')? 
+            <button onClick={() => {localStorage.removeItem('authToken');window.location.replace('/')}}>Logout</button>
+            :<Link to='/login'><button>Login</button></Link>}
             <Link to='/cart'><BiSolidShoppingBags className='cart' /></Link>
             <div className='cart-count'>{getTotalCartItems()}</div>
         </div>

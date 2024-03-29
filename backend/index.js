@@ -76,6 +76,113 @@ const Product = mongoose.model('Product', {
     }
 })
 
+// Schema for Users
+const User = mongoose.model('User', {
+    name: {
+        type:String, 
+        required:true
+    },
+    email: {
+        type:String, 
+        unique:true,
+        required:true
+    },
+    password: {
+        type:String,
+        required:true
+    },
+    cartData: {
+        type:Object,
+    },
+    date: {
+        type:Date,
+        default:Date.now
+    }    
+})
+
+//Creating Endpoint for User Registration 
+app.post('/signup', async(req,res)=> {
+    let check = await User.findOne({email:req.body.email});
+    if(check)
+    {
+        return res.status(400)
+        .json({
+            success:false,
+            message:"Email Already Exists"
+        })
+        let cart = {}; 
+        for (let i=0; i<500; i++)
+        {
+            cart[i] = 0;
+        }
+        const user = new User({
+            name:req.body.name,
+            email:req.body.email,
+            password:req.body.password,
+            cartData:cart
+        });
+        await user.save();
+
+        const data = {
+            user: {
+                id:user.id
+            }
+        } 
+
+        const authToken = jwt.sign(data,'secret_ecom');
+
+        res.json({
+            success:true,authToken,
+            name:req.body.name
+        });
+    }
+}) 
+
+//Creating Endpoint for User Login
+app.post('/login', async(req,res) => {
+    let user = await User.findOne({email:req.body.email});
+    if(user) 
+    {
+        const passValid = req.body.password === user.password;
+        if(passValid) 
+        {
+            const data = {
+                user: {
+                    id:user.id
+                }
+            }
+            const authToken = jwt.sign(data,'secret_ecom');
+            res.json({
+                success:true,authToken,
+                name:user.name
+            });
+        }
+        else 
+        {
+            res.json({
+                success:false,
+                message:"Invalid Password"
+            });
+        }
+    }
+    else 
+    {
+        res.json({
+            success:false,
+            message:"User/Email Not Found"
+        });
+    }
+})
+
+// creating endpoint for New Arrivals(Popular.jsx)
+app.get('/newestarrivals', async(req,res) => {
+    let products = await Product.find({});
+    let newestarrivals = products.slice(1).slice(-8);
+    console.log('New Arrivals Fetched');
+    res.send(newestarrivals);
+})
+
+
 //API to ADD Products
 app.post('/addproduct', async(req,res) =>{
         let products = await Product.find({});
@@ -127,7 +234,8 @@ app.get('/allproducts', async(req,res) => {
 
 
 app.listen(port, (error) => {
-    if (!error) {
+    if (!error) 
+    {
         console.log("Server running on Port "+port);
     }
     else 
