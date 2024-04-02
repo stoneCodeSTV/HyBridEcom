@@ -1,10 +1,21 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './Deals.css'
 import deals from '../Assets/deals'
 import Item from '../Item/Item'
 
 
+
 const Deals = () => {
+
+  const [deals, setDeals] = useState([]);
+
+  useEffect(() => {
+    fetch('http://localhost:4000/deals')
+    .then(response => response.json())
+    .then((data) => 
+      setDeals(data));
+  },[])
+
   return (
     <section id='deals'>
     <div className='new-deals'>

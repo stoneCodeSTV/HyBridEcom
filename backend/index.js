@@ -182,6 +182,22 @@ app.get('/newestarrivals', async(req,res) => {
     res.send(newestarrivals);
 })
 
+//Creating endpoint for Deals(Deals.jsx)
+app.get('/deals', async(req,res) => {
+    let products = await Product.find({});
+    let deals = products.slice(1).slice(-8);
+    console.log('Deals Fetched');
+    res.send(deals);
+})
+
+//Creating endpoint for adding to Cart
+app.post('/addtocart', async(req,res) => {
+    let products = await Product.find({});
+    let addtocart = products.slice(0,500);
+    console.log('Deals Fetched');
+    res.send(addtocart);
+})
+
 
 //API to ADD Products
 app.post('/addproduct', async(req,res) =>{
