@@ -190,12 +190,39 @@ app.get('/deals', async(req,res) => {
     res.send(deals);
 })
 
+// middleware to fetch user 
+const fetchUser = async (req,res,next) => {
+    const authToken = req.header('authToken');
+    if(!authToken)
+    {
+        res.status(401).json({
+            success:false,
+            message:"Please Login"
+        });
+    }
+    try 
+    {
+        const verify = jwt.verify(authToken,'secret_ecom');
+        req.user = verify.user;
+        next();
+    }
+    catch (error)
+    {
+        res.status(401).json({
+            success:false,
+            message:"Invalid Token"
+        });
+    }
+}
+
+
 //Creating endpoint for adding to Cart
-app.post('/addtocart', async(req,res) => {
-    let products = await Product.find({});
-    let addtocart = products.slice(0,500);
-    console.log('Deals Fetched');
-    res.send(addtocart);
+app.post('/addtocart',fetchUser, async(req,res) => {
+
+    let userData = await UserState.findOne({_id:req.user.id});
+    userData.cartData[req.body.id] += 1;
+    await User.findOneAndUpdate({_id:req.user.id},{cartData:userData.cartData});
+    res.send('Added to Cart');
 })
 
 

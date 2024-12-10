@@ -9,7 +9,7 @@ const getDefaultCart = () => {
     for (let i = 0; i < 500+1; i++) {
         cart[i] = 0;
     }
-    return cart;
+    return cart; 
 }
 
 const ShopContextProvider = (props) => {
